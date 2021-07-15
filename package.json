@@ -1,7 +1,7 @@
 {
   "name": "@mediaadmin/service-bus",
-  "version": "1.0.3",
-  "description": "",
+  "version": "1.0.4",
+  "description": "It's a NodeJS library for use Azure Service Bus",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,5 +13,15 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntMenG/-mediaadmin-service-bus.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/AntMenG/-mediaadmin-service-bus/issues"
+  },
+  "homepage": "https://github.com/AntMenG/-mediaadmin-service-bus#readme"
 }
