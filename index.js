@@ -4,11 +4,13 @@ const {
     remove,
     send,
     receive,
+    get
 } = require('./dist');
 
 module.exports = {
     create,
     remove,
     send,
-    receive
+    receive,
+    get
 }

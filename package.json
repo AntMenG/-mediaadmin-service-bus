@@ -1,6 +1,6 @@
 {
   "name": "@mediaadmin/service-bus",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "It's a NodeJS library for use Azure Service Bus",
   "main": "index.js",
   "scripts": {
