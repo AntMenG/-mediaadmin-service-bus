@@ -1,2 +1,2 @@
 export { receive, send } from './messages';
-export { create, remove } from './manager';
+export { create, remove, get } from './manager';

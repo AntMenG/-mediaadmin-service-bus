@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.remove = exports.create = void 0;
+exports.get = exports.remove = exports.create = void 0;
 const enviroment_1 = require("./config/enviroment");
 const service_bus_1 = require("@azure/service-bus");
 /**
@@ -46,3 +46,12 @@ const remove = (queueName) => __awaiter(void 0, void 0, void 0, function* () {
     }
 });
 exports.remove = remove;
+/**
+ * Get a queue in azure service bus
+ * @param queueName - Name of the queue
+ */
+const get = (queueName) => __awaiter(void 0, void 0, void 0, function* () {
+    const serviceBusAdministrationClient = new service_bus_1.ServiceBusAdministrationClient(enviroment_1.enviroment.SERVICE_BUS);
+    return yield serviceBusAdministrationClient.getQueueRuntimeProperties(queueName);
+});
+exports.get = get;

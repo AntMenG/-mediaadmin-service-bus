@@ -1,5 +1,5 @@
 import { enviroment as env } from './config/enviroment';
-import { ServiceBusAdministrationClient } from '@azure/service-bus';
+import { QueueRuntimeProperties, ServiceBusAdministrationClient, WithResponse } from '@azure/service-bus';
 
 /**
  * Create a new queue in azure service bus
@@ -31,4 +31,13 @@ export const remove = async (queueName: string): Promise<boolean> => {
         console.log(error);
         return false;
     }
+}
+
+/**
+ * Get a queue in azure service bus
+ * @param queueName - Name of the queue
+ */
+export const get = async (queueName: string): Promise<WithResponse<QueueRuntimeProperties>> => {
+    const serviceBusAdministrationClient = new ServiceBusAdministrationClient(env.SERVICE_BUS);
+    return await serviceBusAdministrationClient.getQueueRuntimeProperties(queueName);
 }
